@@ -1,13 +1,259 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="Description" content="jewelry store website">
+  <title>HTML Academy: bicycles</title>
+  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font">
+  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-300.woff2" as="font">
+  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font">
+  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font">
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+
+<body class="page__body">
+  <header class="page-header page-header--close-menu page-header--nojs">
+    <div class="page-header__wrapper wrapper">
+      <a class="page-header__logo">
+        <span class="visually-hidden">moon</span>
+        <svg width="70" height="21">
+          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+        </svg>
+      </a>
+
+      <form class="page-header__search" action="https://echo.htmlacademy.ru/" method="get">
+        <input id="search" type="text" name="search" placeholder="Поиск:">
+        <label for="search" aria-label="Поиск"></label>
+      </form>
+
+      <button class="page-header__menu-button" type="button">
+        <span class="visually-hidden">toggle menu</span>
+        <svg class="page-header__open-btn" width="24" height="14">
+          <use xlink:href="img/sprite_auto.svg#icon-menu"></use>
+        </svg>
+        <svg class="page-header__close-btn" width="24" height="24">
+          <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <div class="page-header__personal-area">
+        <a class="page-header__login" href="#">Login</a>
+        <a class="page-header__cart" href="#">Cart <span>0</span></a>
+      </div>
+    </div>
+
+    <nav class="page-header__menu wrapper">
+      <ul class="page-header__menu-list">
+        <li class="page-header__menu-item">
+          <a class="page-header__menu-link" href="#" data-hover="What’s new">
+            <span>What’s new</span>
+            <svg width="8" height="12">
+              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="page-header__menu-item">
+          <a class="page-header__menu-link" href="#types" data-hover="Chokers">
+            <span>Chokers</span>
+            <svg width="8" height="12">
+              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="page-header__menu-item">
+          <a class="page-header__menu-link" href="#video" data-hover="Necklaces">
+            <span>Necklaces</span>
+            <svg width="8" height="12">
+              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="page-header__menu-item">
+          <a class="page-header__menu-link" href="#contacts" data-hover="Rings">
+            <span>Rings</span>
+            <svg width="8" height="12">
+              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="page-header__menu-item">
+          <a class="page-header__menu-link" href="#contacts" data-hover="Earrings">
+            <span>Earrings</span>
+            <svg width="8" height="12">
+              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- <main class="page-main">
+    <h1 class="visually-hidden">Магазин велосипедов "Moon"</h1>
+
+    <section class="promo">
+      <div class="promo__wrapper wrapper">
+        <div class="promo__block">
+          <h2 class="promo__title">Мы продаем велосипеды</h2>
+
+          <p class="promo__paragraph">
+            Наш магазин отбирает только самые лучшие велосипеды для продажи
+          </p>
+        </div>
+
+        <form class="promo__form" action="https://echo.htmlacademy.ru" method="GET">
+          <p class="promo__form-description">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+
+          <label class="visually-hidden" for="name">Введите ваше имя:</label>
+          <input id="name" type="text" name="name" placeholder="Введите Ваше Имя" required>
+
+          <label class="visually-hidden" for="tel">Введите номер телефона:</label>
+          <input id="tel" type="tel" name="tel" placeholder="Введите Ваш номер телефона" pattern="[^A-Za-zА-Яа-яЁё]+$" required>
+
+          <button class="promo__button" type="submit">Подобрать велосипед мечты</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="about-us" id="about-us">
+      <div class="about-us__wrapper wrapper">
+        <h2 class="about-us__title title">Несколько фактов о нас</h2>
+
+        <ol class="about-us__list">
+          <li class="about-us__item">
+            Самый широкий выбор велосипедов!
+          </li>
+          <li class="about-us__item">
+            Доставка велосипедов по всей России!
+          </li>
+          <li class="about-us__item">
+            Большой выбор крутых аксессуаров!
+          </li>
+          <li class="about-us__item">
+            Профессиональные консультации!
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="types" id="types">
+      <div class="types__wrapper wrapper">
+        <h2 class="types__title title">Виды велосипедов</h2>
+
+        <ul class="types__list">
+          <li class="types__item types__item--road">
+            <a href="#" class="types__link">
+              <h3 class="types__name">Дорожный велосипед</h3>
+
+              <div class="types__box">
+                <picture>
+                  <source type="image/webp" srcset="img/road@1x.webp 1x, img/road@2x.webp 2x"> -->
+
+                  <!-- 1x: 342px / 503px; 2x: 684px / 1006px -->
+                  <!-- <img class="types__picture" src="img/road@1x.jpg" srcset="img/road@2x.jpg 2x" alt="Дорожный велосипед">
+                </picture>
+              </div>
+            </a>
+          </li>
+          <li class="types__item types__item--mountain">
+            <a href="#" class="types__link">
+              <h3 class="types__name">Горный велосипед</h3>
+
+              <div class="types__box">
+                <picture>
+                  <source type="image/webp" srcset="img/mountain@1x.webp 1x, img/mountain@2x.webp 2x"> -->
+
+                  <!-- 1x: 342px / 566px; 2x: 684px / 1132px -->
+                  <!-- <img class="types__picture" src="img/mountain@1x.jpg" srcset="img/mountain@2x.jpg 2x" alt="Горный велосипед">
+                </picture>
+              </div>
+            </a>
+          </li>
+          <li class="types__item types__item--child">
+            <a href="#" class="types__link">
+              <h3 class="types__name">Детский велосипед</h3>
+
+              <div class="types__box">
+                <picture>
+                  <source type="image/webp" srcset="img/child@1x.webp 1x, img/child@2x.webp 2x"> -->
+
+                  <!-- 1x: 342px / 513px; 2x: 684px / 1026px -->
+                  <!-- <img class="types__picture" src="img/child@1x.jpg" srcset="img/child@2x.jpg 2x" alt="Детский велосипед">
+                </picture>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="video" id="video">
+      <div class="video__wrapper wrapper">
+        <h2 class="video__title title">Видео про велосипеды</h2>
+
+        <p class="video__paragraph">
+          В этом видео мы подробно расскажем про особенности выбора велосипеда для себя
+        </p>
+
+        <div class="video__box">
+          <picture>
+            <source type="image/webp" srcset="img/bg-video@1x.webp 1x, img/bg-video@2x.webp 2x"> -->
+
+            <!-- 1x: 929px / 522px; 2x: 1858px / 1044px -->
+            <!-- <img src="img/bg-video@1x.jpg" srcset="img/bg-video@2x.jpg 2x" alt="видео">
+          </picture>
+
+          <button class="video__play" type="button">
+            <span class="visually-hidden">воспроизвести</span>
+            <svg width="14" height="20">
+              <use xlink:href="img/sprite_auto.svg#icon-play"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>  -->
+
+  <!-- <footer class="page-footer" id="contacts">
+    <div class="page-footer__wrapper wrapper">
+      <h2 class="page-footer__title title">Как нас найти?</h2>
+
+      <p class="page-footer__address">
+        Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19
+      </p>
+
+      <div class="page-footer__box">
+        <picture>
+          <source type="image/webp" srcset="img/map@1x.webp 1x, img/map@2x.webp 2x"> -->
+
+          <!-- 1x: 957px / 530px; 2x: 1914px / 1060px -->
+          <!-- <img src="img/map@1x.png" srcset="img/map@2x.png 2x" alt="карта">
+        </picture>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412389!2d30.32089461595737!3d59.93879686904807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1611054303388!5m2!1sru!2sru" width="957" height="530" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+
+      <div class="page-footer__contacts">
+        <a class="page-footer__email" href="mailto:puteshestviemechta@gmail.ru">
+          <svg width="26" height="20">
+            <use xlink:href="img/sprite_auto.svg#icon-email"></use>
+          </svg>
+          <span class="page-footer__email-long">puteshestviemechta@gmail.ru</span>
+        </a>
+
+        <a class="page-footer__phone" href="tel:849978468446">
+          <svg width="23" height="24">
+            <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+          </svg>
+          <span>+7 (499) -784-684-46</span>
+        </a>
+      </div>
+    </div>
+  </footer> -->
+
+  <!-- <script src="js/main.js"></script> -->
 </body>
+
 </html>
