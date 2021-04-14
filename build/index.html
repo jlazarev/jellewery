@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="Description" content="jewelry store website">
   <title>HTML Academy: bicycles</title>
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font">
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-300.woff2" as="font">
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font">
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-600.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-italic.woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-regular.woff2" as="font">
+  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font">
+  <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font">
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 
@@ -17,241 +19,480 @@
   <header class="page-header page-header--close-menu page-header--nojs">
     <div class="page-header__wrapper wrapper">
       <a class="page-header__logo">
-        <span class="visually-hidden">moon</span>
-        <svg width="70" height="21">
+        <span class="visually-hidden">Chjewellery</span>
+        <svg width="66" height="66">
           <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
         </svg>
       </a>
 
       <form class="page-header__search" action="https://echo.htmlacademy.ru/" method="get">
-        <input id="search" type="text" name="search" placeholder="Поиск:">
-        <label for="search" aria-label="Поиск"></label>
+        <input id="search" type="text" name="search" placeholder="Type here to search">
+        <label for="search" aria-label="search">
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite_auto.svg#icon-magnifier"></use>
+          </svg>
+        </label>
       </form>
 
       <button class="page-header__menu-button" type="button">
         <span class="visually-hidden">toggle menu</span>
-        <svg class="page-header__open-btn" width="24" height="14">
+        <svg class="page-header__open-btn" width="25" height="18">
           <use xlink:href="img/sprite_auto.svg#icon-menu"></use>
-        </svg>
-        <svg class="page-header__close-btn" width="24" height="24">
-          <use xlink:href="img/sprite_auto.svg#icon-close"></use>
         </svg>
       </button>
 
       <div class="page-header__personal-area">
         <a class="page-header__login" href="#">Login</a>
-        <a class="page-header__cart" href="#">Cart <span>0</span></a>
+        <a class="page-header__cart" href="#">
+          <span>Cart 0</span>
+          <svg width="20" height="18">
+            <use xlink:href="img/sprite_auto.svg#icon-package"></use>
+          </svg>
+        </a>
       </div>
     </div>
 
-    <nav class="page-header__menu wrapper">
-      <ul class="page-header__menu-list">
+    <nav class="page-header__menu">
+      <ul class="page-header__menu-list wrapper">
         <li class="page-header__menu-item">
           <a class="page-header__menu-link" href="#" data-hover="What’s new">
             <span>What’s new</span>
-            <svg width="8" height="12">
-              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
-            </svg>
           </a>
         </li>
         <li class="page-header__menu-item">
-          <a class="page-header__menu-link" href="#types" data-hover="Chokers">
+          <a class="page-header__menu-link" href="#" data-hover="Chokers">
             <span>Chokers</span>
-            <svg width="8" height="12">
-              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
-            </svg>
           </a>
         </li>
         <li class="page-header__menu-item">
-          <a class="page-header__menu-link" href="#video" data-hover="Necklaces">
+          <a class="page-header__menu-link" href="#" data-hover="Necklaces">
             <span>Necklaces</span>
-            <svg width="8" height="12">
-              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
-            </svg>
           </a>
         </li>
         <li class="page-header__menu-item">
-          <a class="page-header__menu-link" href="#contacts" data-hover="Rings">
+          <a class="page-header__menu-link" href="#" data-hover="Rings">
             <span>Rings</span>
-            <svg width="8" height="12">
-              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
-            </svg>
           </a>
         </li>
         <li class="page-header__menu-item">
-          <a class="page-header__menu-link" href="#contacts" data-hover="Earrings">
+          <a class="page-header__menu-link" href="#" data-hover="Earrings">
             <span>Earrings</span>
-            <svg width="8" height="12">
-              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
-            </svg>
           </a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <!-- <main class="page-main">
-    <h1 class="visually-hidden">Магазин велосипедов "Moon"</h1>
+  <main class="page-main">
+    <h1 class="visually-hidden">jewelry store CH</h1>
 
     <section class="promo">
       <div class="promo__wrapper wrapper">
-        <div class="promo__block">
-          <h2 class="promo__title">Мы продаем велосипеды</h2>
+        <h2 class="promo__title title">PERFECTION</h2>
 
-          <p class="promo__paragraph">
-            Наш магазин отбирает только самые лучшие велосипеды для продажи
-          </p>
-        </div>
-
-        <form class="promo__form" action="https://echo.htmlacademy.ru" method="GET">
-          <p class="promo__form-description">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-
-          <label class="visually-hidden" for="name">Введите ваше имя:</label>
-          <input id="name" type="text" name="name" placeholder="Введите Ваше Имя" required>
-
-          <label class="visually-hidden" for="tel">Введите номер телефона:</label>
-          <input id="tel" type="tel" name="tel" placeholder="Введите Ваш номер телефона" pattern="[^A-Za-zА-Яа-яЁё]+$" required>
-
-          <button class="promo__button" type="submit">Подобрать велосипед мечты</button>
-        </form>
+        <p class="promo__paragraph">
+          made to be yours
+        </p>
       </div>
     </section>
 
-    <section class="about-us" id="about-us">
-      <div class="about-us__wrapper wrapper">
-        <h2 class="about-us__title title">Несколько фактов о нас</h2>
+    <section class="new">
+      <div class="new__wrapper wrapper">
+        <h2 class="new__title title">New In</h2>
 
-        <ol class="about-us__list">
-          <li class="about-us__item">
-            Самый широкий выбор велосипедов!
+        <a class="new__shop" href="#">Shop Now</a>
+
+        <ul class="new__list">
+          <li class="new__item new__item--show-tablet">
+            <a class="new__link" href="#">
+              <h3 class="new__item-title">Necklace with amethyst</h3>
+
+              <div class="new__img-box">
+                <picture>
+                  <source type="image/webp" srcset="img/necklace@1x.webp 1x, img/necklace@2x.webp 2x">
+
+                  <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
+                  <img class="new__picture" src="img/necklace@1x.jpg" srcset="img/necklace@2x.jpg 2x" alt="Necklace with amethyst">
+                </picture>
+              </div>
+
+              <span class="new__price">$ 145</span>
+            </a>
           </li>
-          <li class="about-us__item">
-            Доставка велосипедов по всей России!
+
+          <li class="new__item new__item--show-tablet">
+            <a class="new__link" href="#">
+              <h3 class="new__item-title">Layered сhoker</h3>
+
+              <div class="new__img-box">
+                <picture>
+                  <source type="image/webp" srcset="img/choker@1x.webp 1x, img/choker@2x.webp 2x">
+
+                  <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
+                  <img class="new__picture" src="img/choker@1x.jpg" srcset="img/choker@2x.jpg 2x" alt="Layered сhoker">
+                </picture>
+              </div>
+
+              <span class="new__price">$ 115</span>
+            </a>
           </li>
-          <li class="about-us__item">
-            Большой выбор крутых аксессуаров!
+
+          <li class="new__item">
+            <a class="new__link" href="#">
+              <h3 class="new__item-title">Gold chain</h3>
+
+              <div class="new__img-box">
+                <picture>
+                  <source type="image/webp" srcset="img/chain@1x.webp 1x, img/chain@2x.webp 2x">
+
+                  <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
+                  <img class="new__picture" src="img/chain@1x.jpg" srcset="img/chain@2x.jpg 2x" alt="Gold chain">
+                </picture>
+              </div>
+
+              <span class="new__price">$ 215</span>
+            </a>
           </li>
-          <li class="about-us__item">
-            Профессиональные консультации!
+
+          <li class="new__item">
+            <a class="new__link" href="#">
+              <h3 class="new__item-title">Galaxy earrings</h3>
+
+              <div class="new__img-box">
+                <picture>
+                  <source type="image/webp" srcset="img/earrings@1x.webp 1x, img/earrings@2x.webp 2x">
+
+                  <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
+                  <img class="new__picture" src="img/earrings@1x.jpg" srcset="img/earrings@2x.jpg 2x" alt="Galaxy earrings">
+                </picture>
+              </div>
+
+              <span class="new__price">$ 95</span>
+            </a>
           </li>
+        </ul>
+
+        <a class="new__back-btn slider__control" href="#" data-slide="prev">
+          <span class="visually-hidden">back</span>
+          <svg width="30" height="11">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+          </svg>
+        </a>
+
+        <a class="new__forward-btn slider__control" href="#" data-slide="next">
+          <span class="visually-hidden">forward</span>
+          <svg width="30" height="11">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+          </svg>
+        </a>
+
+        <ol class="new__pagination">
+          <li class="new__pagination-active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li class="new__pagination-show-tablet"><a href="#">4</a></li>
+          <li class="new__pagination-show-tablet"><a href="#">5</a></li>
+          <li class="new__pagination-show-tablet"><a href="#">6</a></li>
         </ol>
+
+        <div class="new__pagination-mobile">
+          <span>1</span> of <span>6</span>
+        </div>
       </div>
     </section>
 
-    <section class="types" id="types">
-      <div class="types__wrapper wrapper">
-        <h2 class="types__title title">Виды велосипедов</h2>
+    <section class="blog">
+      <div class="blog__wrapper wrapper">
+        <h2 class="blog__title title">Blog</h2>
 
-        <ul class="types__list">
-          <li class="types__item types__item--road">
-            <a href="#" class="types__link">
-              <h3 class="types__name">Дорожный велосипед</h3>
+        <a class="blog__sup-link" href="#">Read All</a>
 
-              <div class="types__box">
-                <picture>
-                  <source type="image/webp" srcset="img/road@1x.webp 1x, img/road@2x.webp 2x"> -->
+        <ul class="blog__list">
+          <li class="blog__item blog__item--how">
+            <div class="blog__container">
+              <h3 class="blog__item-title">How to care for your jewellery</h3>
 
-                  <!-- 1x: 342px / 503px; 2x: 684px / 1006px -->
-                  <!-- <img class="types__picture" src="img/road@1x.jpg" srcset="img/road@2x.jpg 2x" alt="Дорожный велосипед">
-                </picture>
-              </div>
-            </a>
+              <span class="blog__date">September 30, 2019</span>
+
+              <a class="blog__link" href="#">Read Article</a>
+            </div>
+
+            <div class="blog__img-box">
+              <picture>
+                <source type="image/webp" srcset="img/how-to-care@1x.webp 1x, img/how-to-care@2x.webp 2x">
+
+                <!-- 1x: 285px / 300px; 2x: 570px / 600px -->
+                <img class="new__picture" src="img/how-to-care@1x.jpg" srcset="img/how-to-care@2x.jpg 2x" alt="how-to-care">
+              </picture>
+            </div>
           </li>
-          <li class="types__item types__item--mountain">
-            <a href="#" class="types__link">
-              <h3 class="types__name">Горный велосипед</h3>
 
-              <div class="types__box">
-                <picture>
-                  <source type="image/webp" srcset="img/mountain@1x.webp 1x, img/mountain@2x.webp 2x"> -->
+          <li class="blog__item blog__item--power">
+            <div class="blog__container">
+              <h3 class="blog__item-title">Power of crystals</h3>
 
-                  <!-- 1x: 342px / 566px; 2x: 684px / 1132px -->
-                  <!-- <img class="types__picture" src="img/mountain@1x.jpg" srcset="img/mountain@2x.jpg 2x" alt="Горный велосипед">
-                </picture>
-              </div>
-            </a>
+              <span class="blog__date">September 23, 2019</span>
+
+              <a class="blog__link" href="#">Read Article</a>
+            </div>
+
+            <div class="blog__img-box">
+              <picture>
+                <source type="image/webp" srcset="img/power@1x.webp 1x, img/power@2x.webp 2x">
+
+                <!-- 1x: 285px / 300px; 2x: 570px / 600px -->
+                <img class="new__picture" src="img/power@1x.jpg" srcset="img/power@2x.jpg 2x" alt="power">
+              </picture>
+            </div>
           </li>
-          <li class="types__item types__item--child">
-            <a href="#" class="types__link">
-              <h3 class="types__name">Детский велосипед</h3>
 
-              <div class="types__box">
-                <picture>
-                  <source type="image/webp" srcset="img/child@1x.webp 1x, img/child@2x.webp 2x"> -->
+          <li class="blog__item blog__item--aw">
+            <div class="blog__container">
+              <h3 class="blog__item-title">AW 19 trends</h3>
 
-                  <!-- 1x: 342px / 513px; 2x: 684px / 1026px -->
-                  <!-- <img class="types__picture" src="img/child@1x.jpg" srcset="img/child@2x.jpg 2x" alt="Детский велосипед">
-                </picture>
-              </div>
-            </a>
+              <span class="blog__date">September 16, 2019</span>
+
+              <a class="blog__link" href="#">Read Article</a>
+            </div>
+
+            <div class="blog__img-box">
+              <picture>
+                <source type="image/webp" srcset="img/aw@1x.webp 1x, img/aw@2x.webp 2x">
+
+                <!-- 1x: 570px / 630px; 2x: 1140px / 1260px -->
+                <img class="new__picture" src="img/aw@1x.jpg" srcset="img/aw@2x.jpg 2x" alt="aw">
+              </picture>
+            </div>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="video" id="video">
-      <div class="video__wrapper wrapper">
-        <h2 class="video__title title">Видео про велосипеды</h2>
+    <section class="questions">
+      <div class="questions__wrapper wrapper">
+        <h2 class="questions__title title">Frequently asked questions</h2>
 
-        <p class="video__paragraph">
-          В этом видео мы подробно расскажем про особенности выбора велосипеда для себя
-        </p>
+        <ul class="questions__list">
+          <li class="questions__item questions__item--open">
+            <h3 class="questions__question">
+              What materials are the jewellery made of?
+            </h3>
 
-        <div class="video__box">
-          <picture>
-            <source type="image/webp" srcset="img/bg-video@1x.webp 1x, img/bg-video@2x.webp 2x"> -->
+            <p class="questions__answer">
+              Our jewellerry is made of solid gold, silver or leather.
+              Also, some jewellery contains precious and semiprecious stones and crystals.
+            </p>
 
-            <!-- 1x: 929px / 522px; 2x: 1858px / 1044px -->
-            <!-- <img src="img/bg-video@1x.jpg" srcset="img/bg-video@2x.jpg 2x" alt="видео">
-          </picture>
+            <button class="questions__toggle">
+              <span class="visually-hidden">toggle arrow</span>
+              <svg width="17" height="10">
+                <use xlink:href="img/sprite_auto.svg#icon-toggle-arrow"></use>
+              </svg>
+            </button>
+          </li>
 
-          <button class="video__play" type="button">
-            <span class="visually-hidden">воспроизвести</span>
-            <svg width="14" height="20">
-              <use xlink:href="img/sprite_auto.svg#icon-play"></use>
-            </svg>
-          </button>
-        </div>
+          <li class="questions__item">
+            <h3 class="questions__question">
+              Which countries do you deliver to?
+            </h3>
+
+            <p class="questions__answer">
+              Our jewellerry is made of solid gold, silver or leather.
+              Also, some jewellery contains precious and semiprecious stones and crystals.
+            </p>
+
+            <button class="questions__toggle">
+              <span class="visually-hidden">toggle arrow</span>
+              <svg width="17" height="10">
+                <use xlink:href="img/sprite_auto.svg#icon-toggle-arrow"></use>
+              </svg>
+            </button>
+          </li>
+
+          <li class="questions__item">
+            <h3 class="questions__question">
+              What are the payment methods?
+            </h3>
+
+            <p class="questions__answer">
+              Our jewellerry is made of solid gold, silver or leather.
+              Also, some jewellery contains precious and semiprecious stones and crystals.
+            </p>
+
+            <button class="questions__toggle">
+              <span class="visually-hidden">toggle arrow</span>
+              <svg width="17" height="10">
+                <use xlink:href="img/sprite_auto.svg#icon-toggle-arrow"></use>
+              </svg>
+            </button>
+          </li>
+
+          <li class="questions__item">
+            <h3 class="questions__question">
+              Can I return the jewellery if it didn’t fit me?
+            </h3>
+
+            <p class="questions__answer">
+              Our jewellerry is made of solid gold, silver or leather.
+              Also, some jewellery contains precious and semiprecious stones and crystals.
+            </p>
+
+            <button class="questions__toggle">
+              <span class="visually-hidden">toggle arrow</span>
+              <svg width="17" height="10">
+                <use xlink:href="img/sprite_auto.svg#icon-toggle-arrow"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
       </div>
     </section>
-  </main>  -->
 
-  <!-- <footer class="page-footer" id="contacts">
+    <section class="follow">
+      <div class="follow__wrapper wrapper">
+        <h2 class="follow__title title"><span>@</span>Chjewellery</h2>
+
+        <a class="follow__sup-link" href="#">Follow Us</a>
+
+        <ul class="follow__pictures">
+          <li class="follow__picture follow__picture--squares">
+            <picture>
+              <source type="image/webp" srcset="img/squares@1x.webp 1x, img/squares@2x.webp 2x">
+
+              <!-- 1x: 570px / 630px; 2x: 1140px / 1260px -->
+              <img class="new__picture" src="img/squares@1x.jpg" srcset="img/squares@2x.jpg 2x" alt="squares">
+            </picture>
+          </li>
+
+          <li class="follow__picture follow__picture--face">
+            <picture>
+              <source type="image/webp" srcset="img/face@1x.webp 1x, img/face@2x.webp 2x">
+
+              <!-- 1x: 570px / 630px; 2x: 1140px / 1260px -->
+              <img class="new__picture" src="img/face@1x.jpg" srcset="img/face@2x.jpg 2x" alt="face">
+            </picture>
+          </li>
+
+          <li class="follow__picture follow__picture--sweater">
+            <picture>
+              <source type="image/webp" srcset="img/sweater@1x.webp 1x, img/sweater@2x.webp 2x">
+
+              <!-- 1x: 570px / 630px; 2x: 1140px / 1260px -->
+              <img class="new__picture" src="img/sweater@1x.jpg" srcset="img/sweater@2x.jpg 2x" alt="sweater">
+            </picture>
+          </li>
+
+          <li class="follow__picture follow__picture--circles">
+            <picture>
+              <source type="image/webp" srcset="img/circles@1x.webp 1x, img/circles@2x.webp 2x">
+
+              <!-- 1x: 570px / 630px; 2x: 1140px / 1260px -->
+              <img class="new__picture" src="img/circles@1x.jpg" srcset="img/circles@2x.jpg 2x" alt="circles">
+            </picture>
+          </li>
+
+          <li class="follow__picture follow__picture--stones">
+            <picture>
+              <source type="image/webp" srcset="img/stones@1x.webp 1x, img/stones@2x.webp 2x">
+
+              <!-- 1x: 570px / 630px; 2x: 1140px / 1260px -->
+              <img class="new__picture" src="img/stones@1x.jpg" srcset="img/stones@2x.jpg 2x" alt="stones">
+            </picture>
+          </li>
+
+          <li class="follow__picture follow__picture--set">
+            <picture>
+              <source type="image/webp" srcset="img/set@1x.webp 1x, img/set@2x.webp 2x">
+
+              <!-- 1x: 570px / 630px; 2x: 1140px / 1260px -->
+              <img class="new__picture" src="img/set@1x.jpg" srcset="img/set@2x.jpg 2x" alt="set">
+            </picture>
+          </li>
+
+          <li class="follow__picture follow__picture--woman">
+            <picture>
+              <source type="image/webp" srcset="img/woman@1x.webp 1x, img/woman@2x.webp 2x">
+
+              <!-- 1x: 570px / 630px; 2x: 1140px / 1260px -->
+              <img class="new__picture" src="img/woman@1x.jpg" srcset="img/woman@2x.jpg 2x" alt="woman">
+            </picture>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
     <div class="page-footer__wrapper wrapper">
-      <h2 class="page-footer__title title">Как нас найти?</h2>
+      <div class="page-footer__mailing-box">
+        <h2 class="page-footer__mailing-title">
+          The good stuff in your inbox
+        </h2>
 
-      <p class="page-footer__address">
-        Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19
-      </p>
+        <form class="page-footer__mailing" action="https://echo.htmlacademy.ru/" method="get">
+          <label for="mailing" aria-label="mailing">
+            News and updates from CH. No spam, we promise.
+          </label>
+          <input id="mailing" type="email" name="mailing" placeholder="Your E-mail">
 
-      <div class="page-footer__box">
-        <picture>
-          <source type="image/webp" srcset="img/map@1x.webp 1x, img/map@2x.webp 2x"> -->
-
-          <!-- 1x: 957px / 530px; 2x: 1914px / 1060px -->
-          <!-- <img src="img/map@1x.png" srcset="img/map@2x.png 2x" alt="карта">
-        </picture>
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412389!2d30.32089461595737!3d59.93879686904807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1611054303388!5m2!1sru!2sru" width="957" height="530" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <button type="submit">
+            Sign Up
+            <svg width="30" height="11">
+              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+            </svg>
+          </button>
+        </form>
       </div>
 
-      <div class="page-footer__contacts">
-        <a class="page-footer__email" href="mailto:puteshestviemechta@gmail.ru">
-          <svg width="26" height="20">
-            <use xlink:href="img/sprite_auto.svg#icon-email"></use>
-          </svg>
-          <span class="page-footer__email-long">puteshestviemechta@gmail.ru</span>
-        </a>
+      <nav class="page-footer__menu">
+        <ul class="page-footer__menu-list">
+          <li><a class="page-footer__link" href="#">Ordering & Payment</a></li>
+          <li><a class="page-footer__link" href="#">Terms & Conditions</a></li>
+          <li><a class="page-footer__link" href="#">Returns & Exchanges</a></li>
+          <li><a class="page-footer__link" href="#">Delivery</a></li>
+          <li><a class="page-footer__link" href="#">About CH</a></li>
+          <li><a class="page-footer__link" href="#">Stores & Hours</a></li>
+          <li><a class="page-footer__link" href="#">Jobs</a></li>
+          <li><a class="page-footer__link" href="#">Contact Us</a></li>
+        </ul>
+      </nav>
 
-        <a class="page-footer__phone" href="tel:849978468446">
-          <svg width="23" height="24">
-            <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
-          </svg>
-          <span>+7 (499) -784-684-46</span>
-        </a>
-      </div>
+      <ul class="page-footer__social-list">
+        <li>
+          <a class="page-footer__social-link" href="#">
+            <span>Facebook</span>
+            <svg width="8" height="15">
+              <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="page-footer__social-link" href="#">
+            <span>Instagram</span>
+            <svg width="15" height="15">
+              <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="page-footer__social-link" href="#">
+            <span>Pinterest</span>
+            <svg width="16" height="15">
+              <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="page-footer__social-link" href="#">
+            <span>Twitter</span>
+            <svg width="15" height="13">
+              <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
-  </footer> -->
+  </footer>
 
   <!-- <script src="js/main.js"></script> -->
 </body>

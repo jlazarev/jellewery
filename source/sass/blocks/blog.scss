@@ -1,0 +1,176 @@
+.blog__wrapper {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+}
+
+.blog__title {
+  margin-bottom: 18px;
+}
+
+.blog__sup-link {
+  color: $basic_black;
+  text-decoration: none;
+  border-bottom: 1px solid $basic_brown;
+  margin-bottom: 60px;
+  padding-bottom: 4px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.blog__list {
+  padding: 0;
+  margin: 0 0 20px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content;
+  gap: 30px;
+  width: 100%;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.blog__item {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 40px;
+  }
+
+  &--how {
+    flex-direction: row-reverse;
+  }
+
+  &--aw {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: -1;
+
+    & .blog__container {
+      position: absolute;
+      min-height: 300px;
+      bottom: 0;
+      right: 0;
+
+      @media (max-width: $tablet-width) {
+        padding-top: 84px;
+        padding-bottom: 16px;
+      }
+
+      @media (max-width: $mobile-width) {
+        position: static;
+        min-height: auto;
+        padding-top: 62px;
+      }
+    }
+
+    & .blog__img-box {
+      width: auto;
+    }
+  }
+}
+
+.blog__container {
+  width: 50%;
+  background-color: $bg_light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 67px;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding-top: 45px;
+  }
+}
+
+.blog__date {
+  order: -1;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: $basic_grey;
+}
+
+.blog__item-title {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 130%;
+  text-align: center;
+  color: $special_black;
+  margin-top: 13px;
+  padding: 0 60px;
+  margin-bottom: 39px;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 83px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 63px;
+  }
+}
+
+.blog__link {
+  color: $basic_black;
+  text-decoration: none;
+  border-bottom: 1px solid $basic_brown;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 49px;
+  }
+}
+
+.blog__img-box {
+  width: 50%;
+  overflow: hidden;
+
+  @media (max-width: $tablet-width) {
+    height: 300px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    height: 256px;
+  }
+
+  & img {
+    height: 100%;
+    max-width: none;
+    display: block;
+
+    @media (max-width: $tablet-width) {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.blog__list .blog__item {
+  @media (max-width: $mobile-width) {
+    flex-direction: column-reverse;
+  }
+}
