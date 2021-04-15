@@ -1,0 +1,251 @@
+.product {
+  border-top: 1px solid $border;
+
+  @media (max-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.product__wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 50px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 10px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column-reverse;
+    padding-top: 0;
+    align-items: stretch;
+  }
+}
+
+.product__box {
+  margin: 20px auto 0;
+  max-width: 430px;
+  padding: 0 30px;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    min-width: 319px;
+    margin-left: 40px;
+    margin-right: 0;
+    margin-top: 11px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: auto;
+    margin-left: 0;
+    margin-top: 40px;
+    max-width: none;
+  }
+}
+
+.product__title {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  color: $basic_black;
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.product__price {
+  font-size: 26px;
+  line-height: 130%;
+  color: $basic_black;
+  margin-bottom: 38px;
+  display: block;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 29px;
+  }
+}
+
+.product__tabs-container {
+  margin-bottom: 50px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.product__tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.product__tab {
+  color: $basic_grey;
+  text-decoration: none;
+  margin-right: 36px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &--active {
+    color: $basic_black;
+  }
+}
+
+.product__tabs-block {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+}
+
+.product__info {
+  border-spacing: 0px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: $basic_black;
+
+  & td {
+    padding: 10px 0 11px;
+    border-bottom: 1px solid $border;
+
+    &:nth-child(2n) {
+      text-align: end;
+    }
+  }
+}
+
+.product__cart-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-width) {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: $basic_grey;
+
+    @media (max-width: $tablet-width) {
+      font-size: 12px
+    }
+
+    @media (max-width: $mobile-width) {
+      text-align: center;
+      max-width: 60px;
+    }
+  }
+}
+
+.product__cart-link {
+  width: 100%;
+  display: block;
+  background-color: $basic_brown;
+  height: 68px;
+  color: $basic_white;
+  text-align: center;
+  text-decoration: none;
+  padding: 24px 0;
+  margin-bottom: 17px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 13px;
+  }
+}
+
+.product__pictures-container {
+  display: flex;
+  margin-top: 29px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column-reverse;
+    margin-top: 20px;
+    justify-content: flex-end;
+    margin-right: auto;
+    max-width: 400px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: auto;
+    margin-top: 0;
+    height: 260px;
+    overflow: hidden;
+  }
+}
+
+.product__img-tabs {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.product__img-tab {
+  display: block;
+  height: 125px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-right: 30px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-top: 14px;
+  }
+
+  & img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.product__img-box {
+  height: 435px;
+
+  @media (max-width: $tablet-width) {
+    height: 286px;
+  }
+
+  & img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.product__img-blocks {
+  position: relative;
+}
+
+.product__img-pagination {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    position: absolute;
+    left: calc(50% - 20px);
+    top: 235px;
+  }
+}

@@ -53,7 +53,7 @@
 
 .new__item {
   width: 23%;
-  min-height: 360px;
+  padding-bottom: 11px;
 
   @media (max-width: $tablet-width) {
     display: none;
@@ -183,5 +183,79 @@
 
   @media (max-width: $tablet-width) {
     right: 44px;
+  }
+}
+
+.new--catalog {
+  & .new__list {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding-bottom: 3px;
+
+    @media (max-width: $tablet-width) {
+      margin-top: 50px;
+      padding-bottom: 5px;
+    }
+
+    @media (max-width: $mobile-width) {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 40px;
+      row-gap: 26px;
+    }
+  }
+
+  & .new__item {
+    width: 100%;
+    padding-bottom: 6px;
+    display: block;
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 0;
+    }
+  }
+
+  & .new__item-title {
+    margin-top: 21px;
+
+    @media (max-width: $tablet-width) {
+      margin-top: 16px;
+    }
+  }
+
+  & .new__img-box {
+    max-height: 272px;
+    overflow: hidden;
+  }
+
+  & img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.new--card {
+  & .new__wrapper {
+    padding-bottom: 109px;
+
+    @media (max-width: $tablet-width) {
+      padding-bottom: 59px;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-top: 57px;
+    }
+  }
+
+  & .new__list {
+    @media (max-width: $tablet-width) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 6px;
+    }
   }
 }

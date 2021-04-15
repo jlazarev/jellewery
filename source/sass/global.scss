@@ -31,6 +31,15 @@ html {
   padding: 0 15px;
   margin: 0 auto;
 
+  &--catalog {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+
+    @media (max-width: $tablet-width) {
+      display: block;
+    }
+  }
+
   @media (max-width: $tablet-width) {
     padding: 0 45px;
   }
