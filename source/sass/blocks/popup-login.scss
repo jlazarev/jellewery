@@ -1,0 +1,149 @@
+.popup-login {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba($color: $basic_black, $alpha: 0.25);
+  padding-top: 43px;
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  &--open {
+    display: block;
+  }
+}
+
+.popup-login__wrapper {
+  max-width: 430px;
+  min-height: 586px;
+  margin: auto;
+  background-color: $bg_light;
+  background-image: url("../img/bg-login@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% auto;
+  color: $basic_black;
+  position: relative;
+  box-shadow: 0 4px 32px rgba($shadow, 0.24);
+  padding: 188px 45px 20px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-login@2x.jpg");
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 121px 15px 20px;
+    max-width: 350px;
+    min-height: 470px;
+  }
+}
+
+.popup-login__title {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+  color: $basic_black;
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (max-width: $mobile-width) {
+    font-size: 24px;
+    margin-bottom: 19px;
+  }
+}
+
+.popup-login__form {
+  display: flex;
+  flex-direction: column;
+
+  & input {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 8px 0;
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom: 1px solid $basic_black;
+
+    &::placeholder {
+      color: $basic_grey;
+    }
+
+    &:first-of-type {
+      margin-bottom: 27px;
+
+      @media (max-width: $mobile-width) {
+        margin-bottom: 22px;
+      }
+    }
+  }
+}
+
+.popup-login__forgot-link {
+  align-self: flex-end;
+  font-size: 12px;
+  line-height: 18px;
+  color: $basic_grey;
+  text-decoration: none;
+  margin-top: 5px;
+  margin-bottom: 45px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 35px;
+  }
+}
+
+.popup-login__button {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: $basic_white;
+  border-radius: 0;
+  border: none;
+  background-color: $basic_brown;
+  height: 68px;
+  margin-bottom: 15px;
+}
+
+.popup-login__sign-up {
+  font-size: 14px;
+  line-height: 21px;
+  color: $basic_grey;
+  text-align: center;
+}
+
+.popup-login__sign-up-link {
+  color: $basic_black;
+  text-decoration: none;
+  margin: 0 5px;
+
+  @media (max-width: $mobile-width) {
+    margin: 0;
+  }
+}
+
+.popup-login__close-btn {
+  position: absolute;
+  padding: 0;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+
+  @media (max-width: $mobile-width) {
+    top: 15px;
+    right: 15px;
+  }
+}

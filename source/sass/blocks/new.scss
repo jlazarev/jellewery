@@ -4,13 +4,20 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  max-width: 1230px;
 
   @media (max-width: $tablet-width) {
     padding-top: 70px;
+    max-width: 728px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 60px;
+    max-width: 320px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -38,34 +45,40 @@
   }
 }
 
-.new__list {
+.new__container {
   width: 100%;
+}
+
+.new__list {
+  width: auto;
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 26px;
+  margin-bottom: 25px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 14px;
+    width: auto;
+  }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 17px;
+    margin-bottom: 6px;
   }
 }
 
 .new__item {
-  width: 23%;
+  width: 25%;
   padding-bottom: 11px;
+  padding-left: 15px;
+  padding-right: 15px;
 
   @media (max-width: $tablet-width) {
-    display: none;
-    width: 47.7%;
-
-    &--show-tablet {
-      display: block;
-    }
+    width: 50%;
   }
 
   @media (max-width: $mobile-width) {
-    width: 44.8%;
+    width: 50%;
     min-height: auto;
   }
 }
@@ -107,6 +120,7 @@
   font-size: 14px;
   line-height: 130%;
   color: $basic_black;
+  text-align: center;
 }
 
 .new__pagination {
@@ -192,16 +206,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
 
     @media (max-width: $tablet-width) {
       margin-top: 50px;
-      padding-bottom: 5px;
+      padding-bottom: 17px;
     }
 
     @media (max-width: $mobile-width) {
       grid-template-columns: 1fr 1fr;
-      margin-top: 40px;
+      margin-top: 39px;
       row-gap: 26px;
     }
   }
@@ -210,6 +224,8 @@
     width: 100%;
     padding-bottom: 6px;
     display: block;
+    padding-left: 0;
+    padding-right: 0;
 
     @media (max-width: $mobile-width) {
       padding-bottom: 0;
@@ -241,11 +257,11 @@
     padding-bottom: 109px;
 
     @media (max-width: $tablet-width) {
-      padding-bottom: 59px;
+      padding-bottom: 58px;
     }
 
     @media (max-width: $mobile-width) {
-      padding-top: 57px;
+      padding-top: 58px;
     }
   }
 

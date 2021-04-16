@@ -30,16 +30,6 @@
   &:last-child {
     border: none;
   }
-
-  &--open {
-    & .questions__answer {
-      display: block;
-    }
-
-    & .questions__toggle {
-      transform: rotate(180deg);
-    }
-  }
 }
 
 .questions__question {

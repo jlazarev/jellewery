@@ -8,11 +8,15 @@
   @media (max-width: $tablet-width) {
     padding-top: 51px;
     padding-bottom: 50px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 36px;
     padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -56,11 +60,13 @@
   @media (max-width: $tablet-width) {
     grid-template-columns: minmax(151px, auto) minmax(249px, auto) minmax(144px, auto) minmax(8px, auto) minmax(126px, auto);
     grid-template-rows: 129px 15px 7px 89px;
+    width: 97.5%;
   }
 
   @media (max-width: $mobile-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 145px 96px 6px 115px;
+    width: 100%;
   }
 }
 

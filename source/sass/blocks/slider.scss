@@ -1,0 +1,19 @@
+.slider {
+  overflow: hidden;
+}
+
+.slider__track {
+  transition: 0.3s;
+}
+
+.slider__item {
+  min-width: 25%;
+
+  @media (max-width: $tablet-width) {
+    min-width: 50%;
+  }
+}
+
+.nonee.slider__item {
+  display: none;
+}

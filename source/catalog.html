@@ -42,7 +42,7 @@
       </button>
 
       <div class="page-header__personal-area">
-        <a class="page-header__login" href="#">Login</a>
+        <a class="page-header__login link-login" href="#">Login</a>
         <a class="page-header__cart" href="#">
           <span>Cart 0</span>
           <svg width="20" height="18">
@@ -80,6 +80,14 @@
           </a>
         </li>
       </ul>
+
+      <ul class="page-header__sup-menu">
+        <li><a href="#">About CH</a></li>
+        <li><a href="#">Stores & Hours</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+      <a class="page-heager__login-mobile link-login" href="#">Login</a>
     </nav>
   </header>
 
@@ -102,22 +110,22 @@
 
         <form class="filter__form" action="https://echo.htmlacademy.ru" method="GET">
           <div class="filter__block">
-            <div class="filter__fieldset">
+            <div class="filter__fieldset accordion accordion--nojs">
               <h3 class="filter__legend">Product</h3>
 
               <input class="visually-hidden" id="necklaces" type="checkbox" name="necklaces" checked>
-              <label for="necklaces">Necklaces</label>
+              <label class="accordion__content" for="necklaces">Necklaces</label>
 
               <input class="visually-hidden" id="chokers" type="checkbox" name="chokers" checked>
-              <label for="chokers">Chokers</label>
+              <label class="accordion__content" for="chokers">Chokers</label>
 
               <input class="visually-hidden" id="rings" type="checkbox" name="rings">
-              <label for="rings">Rings</label>
+              <label class="accordion__content" for="rings">Rings</label>
 
               <input class="visually-hidden" id="earrings" type="checkbox" name="earrings" checked>
-              <label for="earrings">Earrings</label>
+              <label class="accordion__content" for="earrings">Earrings</label>
 
-              <button class="filter__open-btn" type="button">
+              <button class="filter__open-btn accordion__switch" type="button">
                 <span class="visually-hidden">open-button</span>
                 <svg width="17" height="10">
                   <use xlink:href="img/sprite_auto.svg#icon-toggle-arrow"></use>
@@ -125,16 +133,16 @@
               </button>
             </div>
 
-            <div class="filter__fieldset filter__fieldset--close">
+            <div class="filter__fieldset accordion accordion--nojs">
               <h3 class="filter__legend">Material</h3>
 
               <input class="visually-hidden" id="gold" type="checkbox" name="gold" checked>
-              <label for="gold">Gold</label>
+              <label class="accordion__content" for="gold">Gold</label>
 
               <input class="visually-hidden" id="silver" type="checkbox" name="silver" checked>
-              <label for="silver">Silver</label>
+              <label class="accordion__content" for="silver">Silver</label>
 
-              <button class="filter__open-btn" type="button">
+              <button class="filter__open-btn accordion__switch" type="button">
                 <span class="visually-hidden">open-button</span>
                 <svg width="17" height="10">
                   <use xlink:href="img/sprite_auto.svg#icon-toggle-arrow"></use>
@@ -142,16 +150,16 @@
               </button>
             </div>
 
-            <div class="filter__fieldset filter__fieldset--close">
+            <div class="filter__fieldset accordion accordion--nojs">
               <h3 class="filter__legend">Collection</h3>
 
               <input class="visually-hidden" id="flamingo" type="checkbox" name="flamingo" checked>
-              <label for="flamingo">Pink flamingo</label>
+              <label class="accordion__content" for="flamingo">Pink flamingo</label>
 
               <input class="visually-hidden" id="dreams" type="checkbox" name="dreams" checked>
-              <label for="dreams">Dreams</label>
+              <label class="accordion__content" for="dreams">Dreams</label>
 
-              <button class="filter__open-btn" type="button">
+              <button class="filter__open-btn accordion__switch" type="button">
                 <span class="visually-hidden">open-button</span>
                 <svg width="17" height="10">
                   <use xlink:href="img/sprite_auto.svg#icon-toggle-arrow"></use>
@@ -159,10 +167,10 @@
               </button>
             </div>
 
-            <div  class="filter__fieldset">
+            <div  class="filter__fieldset accordion accordion--nojs">
               <h3  class="filter__legend">Price</h3>
 
-              <div class="filter__range-controls">
+              <div class="filter__range-controls accordion__content">
                 <div class="filter__scale">
                   <div class="filter__bar"></div>
                 </div>
@@ -175,7 +183,7 @@
                 </div>
               </div>
 
-              <button class="filter__open-btn" type="button">
+              <button class="filter__open-btn accordion__switch" type="button">
                 <span class="visually-hidden">open-button</span>
                 <svg width="17" height="10">
                   <use xlink:href="img/sprite_auto.svg#icon-toggle-arrow"></use>
@@ -187,6 +195,13 @@
           <button class="filter__submit-btn" type="submit">Apply</button>
 
           <button class="filter__clear-btn" type="reset">Clear All</button>
+
+          <button class="filter__close-btn" type="button">
+            <span class="visually-hidden">close-button</span>
+            <svg width="14" height="14">
+              <use xlink:href="img/sprite_auto.svg#icon-close-btn"></use>
+            </svg>
+          </button>
         </form>
 
         <button class="filter__open-filter-btn">Filter</button>
@@ -490,7 +505,36 @@
     </div>
   </footer>
 
-  <!-- <script src="js/main.js"></script> -->
+  <div class="popup-login">
+    <div class="popup-login__wrapper">
+      <h2 class="popup-login__title">Log In</h2>
+
+      <form class="popup-login__form" action="https://echo.htmlacademy.ru" method="POST">
+        <label class="visually-hidden" for="email-popup">enter your e-mail</label>
+        <input id="email-popup" type="email" name="email" placeholder="Your E-mail" required>
+
+        <label class="visually-hidden" for="password">enter password</label>
+        <input id="password" type="password" name="password" placeholder="Password" required>
+
+        <a class="popup-login__forgot-link" href="#">Forgot your password?</a>
+
+        <button class="popup-login__button" type="submit">Log In</button>
+      </form>
+
+      <div class="popup-login__sign-up">
+        Don’t have an account? <a class="popup-login__sign-up-link" href="#">Sign up</a>
+      </div>
+
+      <button class="popup-login__close-btn" type="button">
+        <span class="visually-hidden">close</span>
+        <svg width="14" height="14">
+          <use xlink:href="img/sprite_auto.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>
