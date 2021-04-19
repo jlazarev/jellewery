@@ -96,6 +96,12 @@
     background-color: transparent;
     border: none;
     height: 24px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $basic_brown;
+    }
 
     & svg {
       margin-left: 7px;
@@ -156,6 +162,11 @@
   line-height: 130%;
   color: $basic_white;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $basic_brown;
+  }
 }
 
 .page-footer__social-list {
@@ -190,6 +201,11 @@
   text-decoration: none;
   padding-left: 35px;
   position: relative;
+
+  &:hover,
+  &:focus {
+    color: $basic_brown;
+  }
 
   @media (max-width: $mobile-width) {
     padding-left: 0;

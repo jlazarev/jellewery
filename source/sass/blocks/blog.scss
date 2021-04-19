@@ -25,6 +25,12 @@
   @media (max-width: $mobile-width) {
     margin-bottom: 50px;
   }
+
+  &:hover,
+  &:focus {
+    color: $basic_brown;
+    border-color: $basic_black;
+  }
 }
 
 .blog__list {
@@ -138,6 +144,12 @@
   border-bottom: 1px solid $basic_brown;
   padding-bottom: 4px;
   margin-bottom: 10px;
+
+  &:hover,
+  &:focus {
+    color: $basic_brown;
+    border-color: $basic_black;
+  }
 
   @media (max-width: $mobile-width) {
     margin-bottom: 49px;

@@ -180,6 +180,7 @@
 
   var addSwitch = function (block) {
     var switcher = block.querySelector('.accordion__switch');
+    var title = block.querySelector('.accordion__title span');
 
     var closePopup = function (evt) {
       if (block.classList.contains('accordion--open')) {
@@ -188,6 +189,7 @@
         block.classList.remove('accordion--open');
 
         switcher.removeEventListener('click', closePopup);
+        title.removeEventListener('click', closePopup);
       }
     };
 
@@ -195,6 +197,7 @@
       block.classList.add('accordion--open');
 
       switcher.addEventListener('click', closePopup);
+      title.addEventListener('click', closePopup);
     });
   };
 
@@ -203,6 +206,32 @@
       accordions[j].classList.remove('accordion--nojs');
 
       addSwitch(accordions[j]);
+    }
+  }
+
+  // tabs
+
+  var tabs = document.querySelectorAll('.product__tab');
+  var tabBlocks = document.querySelectorAll('.product__tabs-block');
+
+  if (tabs) {
+    var switchesTabs = function (tab, block) {
+      tab.addEventListener('click', function (evt) {
+        evt.preventDefault();
+
+        for (var k = 0; k < tabs.length; k++) {
+          tabs[k].classList.remove('product__tab--active');
+          tabBlocks[k].classList.remove('product__tabs-block--show');
+        }
+
+        tab.classList.add('product__tab--active');
+        block.classList.add('product__tabs-block--show');
+      });
+
+    };
+
+    for (var i = 0; i < tabs.length; i++) {
+      switchesTabs(tabs[i], tabBlocks[i]);
     }
   }
 })();
@@ -215,20 +244,21 @@
   var slidesToShow = 4;
   var slidesToScroll = 4;
   var BREAKPOINT = 1024;
-  var container = document.querySelector('.slider');
-  var track = container.querySelector('.slider__track');
-  var items = container.querySelectorAll('.slider__item');
-  var backBtn = document.querySelector('.slider__back-btn');
-  var forwardBtn = document.querySelector('.slider__forward-btn');
-
-  var windowInnerWidth = document.documentElement.clientWidth;
-
-  if (windowInnerWidth < BREAKPOINT) {
-    slidesToShow = 2;
-    slidesToScroll = 2;
-  }
+  var container = document.querySelector('.slider__container');
 
   if (container) {
+    var track = container.querySelector('.slider__track');
+    var items = container.querySelectorAll('.slider__item');
+    var backBtn = document.querySelector('.slider__back-btn');
+    var forwardBtn = document.querySelector('.slider__forward-btn');
+
+    var windowInnerWidth = document.documentElement.clientWidth;
+
+    if (windowInnerWidth < BREAKPOINT) {
+      slidesToShow = 2;
+      slidesToScroll = 2;
+    }
+
     var itemsCount = items.length;
     var itemWidth = items[0].clientWidth;
     var movePosition = itemWidth * slidesToScroll;

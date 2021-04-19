@@ -84,6 +84,11 @@
   text-decoration: none;
   margin-right: 36px;
 
+  &:hover,
+  &:focus {
+    color: $basic_brown;
+  }
+
   &:last-of-type {
     margin-right: 0;
   }
@@ -91,6 +96,10 @@
   &--active {
     color: $basic_black;
   }
+}
+
+.product__tabs-content {
+  min-height: 120px;
 }
 
 .product__tabs-block {
@@ -157,6 +166,13 @@
   text-decoration: none;
   padding: 24px 0;
   margin-bottom: 17px;
+
+  &:focus,
+  &:hover {
+    color: $basic_brown;
+    border: 1px solid $basic_brown;
+    background-color: $basic_white;
+  }
 
   @media (max-width: $mobile-width) {
     margin-bottom: 13px;

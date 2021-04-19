@@ -17,6 +17,21 @@
   &--open {
     display: block;
   }
+
+  &--page {
+    position: static;
+    padding: 0;
+    background-color: $basic_white;
+    border-top: 1px solid $border;
+
+    & .popup__wrapper {
+      box-shadow: none;
+    }
+
+    & .popup__close-btn {
+      display: none;
+    }
+  }
 }
 
 .popup__wrapper {
@@ -182,11 +197,23 @@
 
 .popup__to-catalog {
   color: $basic_black;
+
+  &:hover,
+  &:focus {
+    color: $basic_brown;
+  }
 }
 
 .popup__to-cart {
   background-color: $basic_brown;
   color: $basic_white;
+
+  &:focus,
+  &:hover {
+    color: $basic_brown;
+    border: 1px solid $basic_brown;
+    background-color: transparent;
+  }
 }
 
 .popup__close-btn {
@@ -196,6 +223,7 @@
   right: 20px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     top: 15px;

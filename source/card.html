@@ -26,7 +26,7 @@
       </a>
 
       <form class="page-header__search" action="https://echo.htmlacademy.ru/" method="get">
-        <input id="search" type="text" name="search" placeholder="Type here to search">
+        <input id="search" type="search" name="search" placeholder="Type here to search">
         <label for="search" aria-label="search">
           <svg width="14" height="14">
             <use xlink:href="img/sprite_auto.svg#icon-magnifier"></use>
@@ -42,7 +42,7 @@
       </button>
 
       <div class="page-header__personal-area">
-        <a class="page-header__login link-login" href="#">Login</a>
+        <a class="page-header__login link-login" href="login.html">Login</a>
         <a class="page-header__cart" href="#">
           <span>Cart 0</span>
           <svg width="20" height="18">
@@ -87,7 +87,7 @@
         <li><a href="#">Contact Us</a></li>
       </ul>
 
-      <a class="page-heager__login-mobile link-login" href="#">Login</a>
+      <a class="page-header__login-mobile link-login" href="#">Login</a>
     </nav>
   </header>
 
@@ -131,7 +131,7 @@
           </div>
 
           <div class="product__cart-block">
-            <a href="#" class="product__cart-link link-popup">
+            <a class="product__cart-link link-popup" href="add-to-cart.html">
               Add to cart
             </a>
 
@@ -148,7 +148,7 @@
                 <source type="image/webp" srcset="img/gold-necklace-for-women@1x.webp 1x, img/gold-necklace-for-women@2x.webp 2x">
 
                 <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
-                <img class="new__picture" src="img/gold-necklace-for-women@1x.jpg" srcset="img/gold-necklace-for-women@2x.jpg 2x" alt="gold necklace for women">
+                <img src="img/gold-necklace-for-women@1x.jpg" srcset="img/gold-necklace-for-women@2x.jpg 2x" alt="gold necklace for women">
               </picture>
             </a>
             <a href="#" class="product__img-tab">
@@ -156,7 +156,7 @@
                 <source type="image/webp" srcset="img/pretty-gold-necklace@1x.webp 1x, img/pretty-gold-necklace@2x.webp 2x">
 
                 <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
-                <img class="new__picture" src="img/pretty-gold-necklace@1x.jpg" srcset="img/pretty-gold-necklace@2x.jpg 2x" alt="pretty gold necklace">
+                <img src="img/pretty-gold-necklace@1x.jpg" srcset="img/pretty-gold-necklace@2x.jpg 2x" alt="pretty gold necklace">
               </picture>
             </a>
             <a href="#" class="product__img-tab">
@@ -164,7 +164,7 @@
                 <source type="image/webp" srcset="img/womens-necklace-set@1x.webp 1x, img/womens-necklace-set@2x.webp 2x">
 
                 <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
-                <img class="new__picture" src="img/womens-necklace-set@1x.jpg" srcset="img/womens-necklace-set@2x.jpg 2x" alt="womens necklace set">
+                <img src="img/womens-necklace-set@1x.jpg" srcset="img/womens-necklace-set@2x.jpg 2x" alt="womens necklace set">
               </picture>
             </a>
           </div>
@@ -175,7 +175,7 @@
                 <source type="image/webp" srcset="img/necklace-detail@1x.webp 1x, img/necklace-detail@2x.webp 2x">
 
                 <!-- 1x: 470px / 435px; 2x: 940px / 870px -->
-                <img class="new__picture" src="img/necklace-detail@1x.jpg" srcset="img/necklace-detail@2x.jpg 2x" alt="necklace detail">
+                <img src="img/necklace-detail@1x.jpg" srcset="img/necklace-detail@2x.jpg 2x" alt="necklace detail">
               </picture>
             </div>
 
@@ -186,12 +186,12 @@
     </section>
 
     <section class="new new--card">
-      <div class="new__wrapper wrapper">
+      <div class="new__wrapper wrapper slider">
         <h2 class="new__title title">You May Also Like</h2>
 
         <a class="new__shop" href="catalog.html">Shop Now</a>
 
-        <div class="new__container slider">
+        <div class="new__container slider__container">
           <ul class="new__list slider__track">
             <li class="new__item slider__item">
               <a class="new__link"  href="#">
@@ -202,7 +202,7 @@
                     <source type="image/webp" srcset="img/necklace@1x.webp 1x, img/necklace@2x.webp 2x">
 
                     <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
-                    <img class="new__picture" src="img/necklace@1x.jpg" srcset="img/necklace@2x.jpg 2x" alt="Necklace with amethyst">
+                    <img src="img/necklace@1x.jpg" srcset="img/necklace@2x.jpg 2x" alt="Necklace with amethyst">
                   </picture>
                 </div>
 
@@ -219,7 +219,7 @@
                     <source type="image/webp" srcset="img/choker@1x.webp 1x, img/choker@2x.webp 2x">
 
                     <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
-                    <img class="new__picture" src="img/choker@1x.jpg" srcset="img/choker@2x.jpg 2x" alt="Layered сhoker">
+                    <img src="img/choker@1x.jpg" srcset="img/choker@2x.jpg 2x" alt="Layered сhoker">
                   </picture>
                 </div>
 
@@ -236,7 +236,7 @@
                     <source type="image/webp" srcset="img/chain@1x.webp 1x, img/chain@2x.webp 2x">
 
                     <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
-                    <img class="new__picture" src="img/chain@1x.jpg" srcset="img/chain@2x.jpg 2x" alt="Gold chain">
+                    <img src="img/chain@1x.jpg" srcset="img/chain@2x.jpg 2x" alt="Gold chain">
                   </picture>
                 </div>
 
@@ -253,7 +253,7 @@
                     <source type="image/webp" srcset="img/earrings@1x.webp 1x, img/earrings@2x.webp 2x">
 
                     <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
-                    <img class="new__picture" src="img/earrings@1x.jpg" srcset="img/earrings@2x.jpg 2x" alt="Galaxy earrings">
+                    <img src="img/earrings@1x.jpg" srcset="img/earrings@2x.jpg 2x" alt="Galaxy earrings">
                   </picture>
                 </div>
 
@@ -270,7 +270,7 @@
                     <source type="image/webp" srcset="img/necklace@1x.webp 1x, img/necklace@2x.webp 2x">
 
                     <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
-                    <img class="new__picture" src="img/necklace@1x.jpg" srcset="img/necklace@2x.jpg 2x" alt="Necklace with amethyst">
+                    <img src="img/necklace@1x.jpg" srcset="img/necklace@2x.jpg 2x" alt="Necklace with amethyst">
                   </picture>
                 </div>
 
@@ -287,7 +287,7 @@
                     <source type="image/webp" srcset="img/choker@1x.webp 1x, img/choker@2x.webp 2x">
 
                     <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
-                    <img class="new__picture" src="img/choker@1x.jpg" srcset="img/choker@2x.jpg 2x" alt="Layered сhoker">
+                    <img src="img/choker@1x.jpg" srcset="img/choker@2x.jpg 2x" alt="Layered сhoker">
                   </picture>
                 </div>
 
@@ -304,7 +304,7 @@
                     <source type="image/webp" srcset="img/chain@1x.webp 1x, img/chain@2x.webp 2x">
 
                     <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
-                    <img class="new__picture" src="img/chain@1x.jpg" srcset="img/chain@2x.jpg 2x" alt="Gold chain">
+                    <img src="img/chain@1x.jpg" srcset="img/chain@2x.jpg 2x" alt="Gold chain">
                   </picture>
                 </div>
 
@@ -321,7 +321,7 @@
                     <source type="image/webp" srcset="img/earrings@1x.webp 1x, img/earrings@2x.webp 2x">
 
                     <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
-                    <img class="new__picture" src="img/earrings@1x.jpg" srcset="img/earrings@2x.jpg 2x" alt="Galaxy earrings">
+                    <img src="img/earrings@1x.jpg" srcset="img/earrings@2x.jpg 2x" alt="Galaxy earrings">
                   </picture>
                 </div>
 
@@ -338,7 +338,7 @@
                     <source type="image/webp" srcset="img/chain@1x.webp 1x, img/chain@2x.webp 2x">
 
                     <!-- 1x: 270px / 284px; 2x: 540px / 568px -->
-                    <img class="new__picture" src="img/chain@1x.jpg" srcset="img/chain@2x.jpg 2x" alt="Gold chain">
+                    <img src="img/chain@1x.jpg" srcset="img/chain@2x.jpg 2x" alt="Gold chain">
                   </picture>
                 </div>
 
@@ -467,7 +467,7 @@
               <source type="image/webp" srcset="img/necklace-detail@1x.webp 1x, img/necklace-detail@2x.webp 2x">
 
               <!-- 1x: 470px / 435px; 2x: 940px / 870px -->
-              <img class="new__picture" src="img/necklace-detail@1x.jpg" srcset="img/necklace-detail@2x.jpg 2x" alt="necklace detail">
+              <img src="img/necklace-detail@1x.jpg" srcset="img/necklace-detail@2x.jpg 2x" alt="necklace detail">
             </picture>
           </div>
         </div>

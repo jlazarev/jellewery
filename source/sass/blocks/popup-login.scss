@@ -18,6 +18,23 @@
   &--open {
     display: block;
   }
+
+  &--page {
+    position: static;
+    background-color: $bg_light;
+    padding: 0;
+
+    & .popup-login__wrapper {
+      box-shadow: none;
+      background-image: none;
+      min-height: 450px;
+      padding-top: 40px;
+    }
+
+    & .popup-login__close-btn {
+      display: none;
+    }
+  }
 }
 
 .popup-login__wrapper {
@@ -99,6 +116,11 @@
   margin-top: 5px;
   margin-bottom: 45px;
 
+  &:hover,
+  &:focus {
+    color: $basic_brown;
+  }
+
   @media (max-width: $mobile-width) {
     margin-bottom: 35px;
   }
@@ -115,6 +137,14 @@
   background-color: $basic_brown;
   height: 68px;
   margin-bottom: 15px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $basic_brown;
+    border: 1px solid $basic_brown;
+    background-color: transparent;
+  }
 }
 
 .popup-login__sign-up {
@@ -129,6 +159,11 @@
   text-decoration: none;
   margin: 0 5px;
 
+  &:focus,
+  &:hover {
+    color: $basic_brown;
+  }
+
   @media (max-width: $mobile-width) {
     margin: 0;
   }
@@ -141,6 +176,7 @@
   right: 20px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     top: 15px;

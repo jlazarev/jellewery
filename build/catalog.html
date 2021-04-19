@@ -26,7 +26,7 @@
       </a>
 
       <form class="page-header__search" action="https://echo.htmlacademy.ru/" method="get">
-        <input id="search" type="text" name="search" placeholder="Type here to search">
+        <input id="search" type="search" name="search" placeholder="Type here to search">
         <label for="search" aria-label="search">
           <svg width="14" height="14">
             <use xlink:href="img/sprite_auto.svg#icon-magnifier"></use>
@@ -42,7 +42,7 @@
       </button>
 
       <div class="page-header__personal-area">
-        <a class="page-header__login link-login" href="#">Login</a>
+        <a class="page-header__login link-login" href="login.html">Login</a>
         <a class="page-header__cart" href="#">
           <span>Cart 0</span>
           <svg width="20" height="18">
@@ -87,7 +87,7 @@
         <li><a href="#">Contact Us</a></li>
       </ul>
 
-      <a class="page-heager__login-mobile link-login" href="#">Login</a>
+      <a class="page-header__login-mobile link-login" href="#">Login</a>
     </nav>
   </header>
 
@@ -111,7 +111,7 @@
         <form class="filter__form" action="https://echo.htmlacademy.ru" method="GET">
           <div class="filter__block">
             <div class="filter__fieldset accordion accordion--nojs">
-              <h3 class="filter__legend">Product</h3>
+              <h3 class="filter__legend accordion__title"><span>Product</span></h3>
 
               <input class="visually-hidden" id="necklaces" type="checkbox" name="necklaces" checked="">
               <label class="accordion__content" for="necklaces">Necklaces</label>
@@ -134,7 +134,7 @@
             </div>
 
             <div class="filter__fieldset accordion accordion--nojs">
-              <h3 class="filter__legend">Material</h3>
+              <h3 class="filter__legend accordion__title"><span>Material</span></h3>
 
               <input class="visually-hidden" id="gold" type="checkbox" name="gold" checked="">
               <label class="accordion__content" for="gold">Gold</label>
@@ -151,7 +151,7 @@
             </div>
 
             <div class="filter__fieldset accordion accordion--nojs">
-              <h3 class="filter__legend">Collection</h3>
+              <h3 class="filter__legend accordion__title"><span>Collection</span></h3>
 
               <input class="visually-hidden" id="flamingo" type="checkbox" name="flamingo" checked="">
               <label class="accordion__content" for="flamingo">Pink flamingo</label>
@@ -168,17 +168,19 @@
             </div>
 
             <div class="filter__fieldset accordion accordion--nojs">
-              <h3 class="filter__legend">Price</h3>
+              <h3 class="filter__legend accordion__title"><span>Price</span></h3>
 
               <div class="filter__range-controls accordion__content">
                 <div class="filter__scale">
                   <div class="filter__bar"></div>
                 </div>
 
-                <div class="filter__toggle filter__toggle--min" tabindex="0" aria-label="minimum price">
+                <div class="filter__toggle filter__toggle--min" tabindex="0">
+                  <span class="visually-hidden">minimum price</span>
                   <span>$55</span>
                 </div>
-                <div class="filter__toggle filter__toggle--max" tabindex="0" aria-label="maximum price">
+                <div class="filter__toggle filter__toggle--max" tabindex="0">
+                  <span class="visually-hidden">maximum price</span>
                   <span>$155</span>
                 </div>
               </div>
@@ -218,7 +220,7 @@
                   <source type="image/webp" srcset="img/double-pearl-earrings@1x.webp 1x, img/double-pearl-earrings@2x.webp 2x">
 
                   <!-- 1x: 270px / 272px; 2x: 540px / 544px -->
-                  <img class="new__picture" src="img/double-pearl-earrings@1x.jpg" srcset="img/double-pearl-earrings@2x.jpg 2x" alt="Double pearl earrings">
+                  <img src="img/double-pearl-earrings@1x.jpg" srcset="img/double-pearl-earrings@2x.jpg 2x" alt="Double pearl earrings">
                 </picture>
               </div>
 
@@ -235,7 +237,7 @@
                   <source type="image/webp" srcset="img/black-choker-gold-bead@1x.webp 1x, img/black-choker-gold-bead@2x.webp 2x">
 
                   <!-- 1x: 270px / 272px; 2x: 540px / 544px -->
-                  <img class="new__picture" src="img/black-choker-gold-bead@1x.jpg" srcset="img/black-choker-gold-bead@2x.jpg 2x" alt="Choker with gold bead">
+                  <img src="img/black-choker-gold-bead@1x.jpg" srcset="img/black-choker-gold-bead@2x.jpg 2x" alt="Choker with gold bead">
                 </picture>
               </div>
 
@@ -252,7 +254,7 @@
                   <source type="image/webp" srcset="img/gold-layered-necklace@1x.webp 1x, img/gold-layered-necklace@2x.webp 2x">
 
                   <!-- 1x: 270px / 272px; 2x: 540px / 544px -->
-                  <img class="new__picture" src="img/gold-layered-necklace@1x.jpg" srcset="img/gold-layered-necklace@2x.jpg 2x" alt="Gold layered necklace">
+                  <img src="img/gold-layered-necklace@1x.jpg" srcset="img/gold-layered-necklace@2x.jpg 2x" alt="Gold layered necklace">
                 </picture>
               </div>
 
@@ -269,7 +271,7 @@
                   <source type="image/webp" srcset="img/blue-gemstone-pendant@1x.webp 1x, img/blue-gemstone-pendant@2x.webp 2x">
 
                   <!-- 1x: 270px / 272px; 2x: 540px / 544px -->
-                  <img class="new__picture" src="img/blue-gemstone-pendant@1x.jpg" srcset="img/blue-gemstone-pendant@2x.jpg 2x" alt="Blue gemstone pendant">
+                  <img src="img/blue-gemstone-pendant@1x.jpg" srcset="img/blue-gemstone-pendant@2x.jpg 2x" alt="Blue gemstone pendant">
                 </picture>
               </div>
 
@@ -286,7 +288,7 @@
                   <source type="image/webp" srcset="img/boho-earrings@1x.webp 1x, img/boho-earrings@2x.webp 2x">
 
                   <!-- 1x: 270px / 272px; 2x: 540px / 544px -->
-                  <img class="new__picture" src="img/boho-earrings@1x.jpg" srcset="img/boho-earrings@2x.jpg 2x" alt="Boho earrings">
+                  <img src="img/boho-earrings@1x.jpg" srcset="img/boho-earrings@2x.jpg 2x" alt="Boho earrings">
                 </picture>
               </div>
 
@@ -303,7 +305,7 @@
                   <source type="image/webp" srcset="img/bird-necklace@1x.webp 1x, img/bird-necklace@2x.webp 2x">
 
                   <!-- 1x: 270px / 272px; 2x: 540px / 544px -->
-                  <img class="new__picture" src="img/bird-necklace@1x.jpg" srcset="img/bird-necklace@2x.jpg 2x" alt="Gold bird necklace">
+                  <img src="img/bird-necklace@1x.jpg" srcset="img/bird-necklace@2x.jpg 2x" alt="Gold bird necklace">
                 </picture>
               </div>
 
@@ -320,7 +322,7 @@
                   <source type="image/webp" srcset="img/black-leather-choker-necklace@1x.webp 1x, img/black-leather-choker-necklace@2x.webp 2x">
 
                   <!-- 1x: 270px / 272px; 2x: 540px / 544px -->
-                  <img class="new__picture" src="img/black-leather-choker-necklace@1x.jpg" srcset="img/black-leather-choker-necklace@2x.jpg 2x" alt="Black leather choker">
+                  <img src="img/black-leather-choker-necklace@1x.jpg" srcset="img/black-leather-choker-necklace@2x.jpg 2x" alt="Black leather choker">
                 </picture>
               </div>
 
@@ -337,7 +339,7 @@
                   <source type="image/webp" srcset="img/purple-gemstone-necklace@1x.webp 1x, img/purple-gemstone-necklace@2x.webp 2x">
 
                   <!-- 1x: 270px / 272px; 2x: 540px / 544px -->
-                  <img class="new__picture" src="img/purple-gemstone-necklace@1x.jpg" srcset="img/purple-gemstone-necklace@2x.jpg 2x" alt="Necklace with amethyst">
+                  <img src="img/purple-gemstone-necklace@1x.jpg" srcset="img/purple-gemstone-necklace@2x.jpg 2x" alt="Necklace with amethyst">
                 </picture>
               </div>
 
@@ -354,7 +356,7 @@
                   <source type="image/webp" srcset="img/elephant-earrings@1x.webp 1x, img/elephant-earrings@2x.webp 2x">
 
                   <!-- 1x: 270px / 272px; 2x: 540px / 544px -->
-                  <img class="new__picture" src="img/elephant-earrings@1x.jpg" srcset="img/elephant-earrings@2x.jpg 2x" alt="Elephant earrings">
+                  <img src="img/elephant-earrings@1x.jpg" srcset="img/elephant-earrings@2x.jpg 2x" alt="Elephant earrings">
                 </picture>
               </div>
 
@@ -371,7 +373,7 @@
                   <source type="image/webp" srcset="img/threader-necklace-closeup@1x.webp 1x, img/threader-necklace-closeup@2x.webp 2x">
 
                   <!-- 1x: 270px / 272px; 2x: 540px / 544px -->
-                  <img class="new__picture" src="img/threader-necklace-closeup@1x.jpg" srcset="img/threader-necklace-closeup@2x.jpg 2x" alt="Threader necklace">
+                  <img src="img/threader-necklace-closeup@1x.jpg" srcset="img/threader-necklace-closeup@2x.jpg 2x" alt="Threader necklace">
                 </picture>
               </div>
 
@@ -388,7 +390,7 @@
                   <source type="image/webp" srcset="img/origami-crane-necklace@1x.webp 1x, img/origami-crane-necklace@2x.webp 2x">
 
                   <!-- 1x: 270px / 272px; 2x: 540px / 544px -->
-                  <img class="new__picture" src="img/origami-crane-necklace@1x.jpg" srcset="img/origami-crane-necklace@2x.jpg 2x" alt="Origami crane necklace">
+                  <img src="img/origami-crane-necklace@1x.jpg" srcset="img/origami-crane-necklace@2x.jpg 2x" alt="Origami crane necklace">
                 </picture>
               </div>
 
@@ -405,7 +407,7 @@
                   <source type="image/webp" srcset="img/marble-earrings@1x.webp 1x, img/marble-earrings@2x.webp 2x">
 
                   <!-- 1x: 270px / 272px; 2x: 540px / 544px -->
-                  <img class="new__picture" src="img/marble-earrings@1x.jpg" srcset="img/marble-earrings@2x.jpg 2x" alt="Marble earrings">
+                  <img src="img/marble-earrings@1x.jpg" srcset="img/marble-earrings@2x.jpg 2x" alt="Marble earrings">
                 </picture>
               </div>
 
@@ -418,6 +420,8 @@
 
     <section class="pagination">
       <div class="pagination__wrapper wrapper">
+        <h2 class="visually-hidden">catalog page numbering</h2>
+
         <a href="#" class="pagination__back-btn">Previous</a>
 
         <ul class="pagination__list">
