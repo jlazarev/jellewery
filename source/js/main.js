@@ -243,6 +243,7 @@
   var position = 0;
   var slidesToShow = 4;
   var slidesToScroll = 4;
+  var currentPage = 0;
   var BREAKPOINT = 1024;
   var container = document.querySelector('.slider__container');
 
@@ -251,12 +252,14 @@
     var items = container.querySelectorAll('.slider__item');
     var backBtn = document.querySelector('.slider__back-btn');
     var forwardBtn = document.querySelector('.slider__forward-btn');
+    var pageItems = document.querySelectorAll('.new__pagination-item--show-desktop');
 
     var windowInnerWidth = document.documentElement.clientWidth;
 
     if (windowInnerWidth < BREAKPOINT) {
       slidesToShow = 2;
       slidesToScroll = 2;
+      pageItems = document.querySelectorAll('.new__pagination-item');
     }
 
     var itemsCount = items.length;
@@ -274,8 +277,40 @@
       track.style.transform = 'translateX(' + position + 'px)';
     };
 
+    var changePage = function (pageNumber) {
+      for (var j = 0; j < pageItems.length; j++) {
+        pageItems[j].classList.remove('new__pagination-item--active');
+      }
+
+      pageNumber.classList.add('new__pagination-item--active');
+    };
+
+    var changePosition = function (index, page) {
+      var pageLink = page.querySelector('a');
+
+      pageLink.addEventListener('click', function (evt) {
+        evt.preventDefault();
+      });
+
+      page.addEventListener('click', function () {
+        currentPage = index;
+
+        position = -(movePosition) * index;
+
+        track.style.transform = 'translateX(' + position + 'px)';
+
+        changePage(page);
+      });
+    };
+
     forwardBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
+
+      if (position > -(itemsCount - slidesToShow) * itemWidth) {
+        changePage(pageItems[currentPage + 1]);
+
+        currentPage += 1;
+      }
 
       var itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
 
@@ -288,6 +323,12 @@
     backBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
 
+      if (position !== 0) {
+        changePage(pageItems[currentPage - 1]);
+
+        currentPage -= 1;
+      }
+
       var itemsLeft = Math.abs(position) / itemWidth;
 
       position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
@@ -295,5 +336,9 @@
       setPosition();
       checkBtns();
     });
+
+    for (var g = 0; g < pageItems.length; g++) {
+      changePosition(g, pageItems[g]);
+    }
   }
 })();

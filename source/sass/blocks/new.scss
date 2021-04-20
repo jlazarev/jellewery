@@ -142,6 +142,10 @@
       width: 100%;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 0;
+  }
 }
 
 .new__price {
@@ -184,7 +188,11 @@
   }
 }
 
-.new__pagination-show-tablet {
+.new__pagination-item {
+  cursor: pointer;
+}
+
+.new__pagination-item--show-tablet {
   display: none;
 
   @media (max-width: $tablet-width) {
@@ -192,7 +200,7 @@
   }
 }
 
-.new__pagination-active a {
+.new__pagination-item--active a {
   color: $basic_black;
 }
 
