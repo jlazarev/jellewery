@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a href="#" class="swiper-img">
+          <picture>
+            <source type="image/webp" srcset="img/necklace-detail@1x.webp 1x, img/necklace-detail@2x.webp 2x">
+
+            <!-- 1x: 470px / 435px; 2x: 940px / 870px -->
+            <img src="img/necklace-detail@1x.jpg" srcset="img/necklace-detail@2x.jpg 2x" alt="necklace detail">
+          </picture>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#" class="swiper-img">
+          <picture>
+            <source type="image/webp" srcset="img/gold-necklace-for-women@1x.webp 1x, img/gold-necklace-for-women@2x.webp 2x">
+
+            <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
+            <img src="img/gold-necklace-for-women@1x.jpg" srcset="img/gold-necklace-for-women@2x.jpg 2x" alt="gold necklace for women">
+          </picture>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#" class="swiper-img">
+          <picture>
+            <source type="image/webp" srcset="img/pretty-gold-necklace@1x.webp 1x, img/pretty-gold-necklace@2x.webp 2x">
+
+            <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
+            <img src="img/pretty-gold-necklace@1x.jpg" srcset="img/pretty-gold-necklace@2x.jpg 2x" alt="pretty gold necklace">
+          </picture>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#" class="swiper-img">
+          <picture>
+            <source type="image/webp" srcset="img/womens-necklace-set@1x.webp 1x, img/womens-necklace-set@2x.webp 2x">
+
+            <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
+            <img src="img/womens-necklace-set@1x.jpg" srcset="img/womens-necklace-set@2x.jpg 2x" alt="womens necklace set">
+          </picture>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#" class="swiper-img">
+          <picture>
+            <source type="image/webp" srcset="img/necklace-detail@1x.webp 1x, img/necklace-detail@2x.webp 2x">
+
+            <!-- 1x: 470px / 435px; 2x: 940px / 870px -->
+            <img src="img/necklace-detail@1x.jpg" srcset="img/necklace-detail@2x.jpg 2x" alt="necklace detail">
+          </picture>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#" class="swiper-img">
+          <picture>
+            <source type="image/webp" srcset="img/gold-necklace-for-women@1x.webp 1x, img/gold-necklace-for-women@2x.webp 2x">
+
+            <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
+            <img src="img/gold-necklace-for-women@1x.jpg" srcset="img/gold-necklace-for-women@2x.jpg 2x" alt="gold necklace for women">
+          </picture>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#" class="swiper-img">
+          <picture>
+            <source type="image/webp" srcset="img/pretty-gold-necklace@1x.webp 1x, img/pretty-gold-necklace@2x.webp 2x">
+
+            <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
+            <img src="img/pretty-gold-necklace@1x.jpg" srcset="img/pretty-gold-necklace@2x.jpg 2x" alt="pretty gold necklace">
+          </picture>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#" class="swiper-img">
+          <picture>
+            <source type="image/webp" srcset="img/womens-necklace-set@1x.webp 1x, img/womens-necklace-set@2x.webp 2x">
+
+            <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
+            <img src="img/womens-necklace-set@1x.jpg" srcset="img/womens-necklace-set@2x.jpg 2x" alt="womens necklace set">
+          </picture>
+        </a>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="js/swiper.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+        },
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30,
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+            renderFraction: function (currentClass, totalClass) {
+              return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+            },
+          },
+        },
+        768: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+          },
+        },
+      }
+    });
+  </script>
+</body>
+
+</html>

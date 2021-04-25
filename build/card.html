@@ -141,46 +141,40 @@
           </div>
         </div>
 
-        <div class="product__pictures-container chief-container">
-          <div class="chief-slider" data-slider="chiefslider">
-            <div class="chief-slider__container">
-              <div class="chief-slider__wrapper">
-                <div class="product__img-tabs chief-slider__items">
-                  <a href="#" class="product__img-tab product__img-tab--show-mobile chief-slider__item">
-                    <picture>
-                      <source type="image/webp" srcset="img/necklace-detail@1x.webp 1x, img/necklace-detail@2x.webp 2x">
+        <div class="product__pictures-container swiper-container">
+          <div class="product__img-tabs swiper-wrapper">
+            <a href="#" class="product__img-tab product__img-tab--show-mobile swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/necklace-detail@1x.webp 1x, img/necklace-detail@2x.webp 2x">
 
-                      <!-- 1x: 470px / 435px; 2x: 940px / 870px -->
-                      <img src="img/necklace-detail@1x.jpg" srcset="img/necklace-detail@2x.jpg 2x" alt="necklace detail">
-                    </picture>
-                  </a>
-                  <a href="#" class="product__img-tab chief-slider__item">
-                    <picture>
-                      <source type="image/webp" srcset="img/gold-necklace-for-women@1x.webp 1x, img/gold-necklace-for-women@2x.webp 2x">
+                <!-- 1x: 470px / 435px; 2x: 940px / 870px -->
+                <img src="img/necklace-detail@1x.jpg" srcset="img/necklace-detail@2x.jpg 2x" alt="necklace detail">
+              </picture>
+            </a>
+            <a href="#" class="product__img-tab swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/gold-necklace-for-women@1x.webp 1x, img/gold-necklace-for-women@2x.webp 2x">
 
-                      <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
-                      <img src="img/gold-necklace-for-women@1x.jpg" srcset="img/gold-necklace-for-women@2x.jpg 2x" alt="gold necklace for women">
-                    </picture>
-                  </a>
-                  <a href="#" class="product__img-tab chief-slider__item">
-                    <picture>
-                      <source type="image/webp" srcset="img/pretty-gold-necklace@1x.webp 1x, img/pretty-gold-necklace@2x.webp 2x">
+                <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
+                <img src="img/gold-necklace-for-women@1x.jpg" srcset="img/gold-necklace-for-women@2x.jpg 2x" alt="gold necklace for women">
+              </picture>
+            </a>
+            <a href="#" class="product__img-tab swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/pretty-gold-necklace@1x.webp 1x, img/pretty-gold-necklace@2x.webp 2x">
 
-                      <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
-                      <img src="img/pretty-gold-necklace@1x.jpg" srcset="img/pretty-gold-necklace@2x.jpg 2x" alt="pretty gold necklace">
-                    </picture>
-                  </a>
-                  <a href="#" class="product__img-tab chief-slider__item">
-                    <picture>
-                      <source type="image/webp" srcset="img/womens-necklace-set@1x.webp 1x, img/womens-necklace-set@2x.webp 2x">
+                <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
+                <img src="img/pretty-gold-necklace@1x.jpg" srcset="img/pretty-gold-necklace@2x.jpg 2x" alt="pretty gold necklace">
+              </picture>
+            </a>
+            <a href="#" class="product__img-tab swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/womens-necklace-set@1x.webp 1x, img/womens-necklace-set@2x.webp 2x">
 
-                      <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
-                      <img src="img/womens-necklace-set@1x.jpg" srcset="img/womens-necklace-set@2x.jpg 2x" alt="womens necklace set">
-                    </picture>
-                  </a>
-                </div>
-              </div>
-            </div>
+                <!-- 1x: 100px / 125px; 2x: 200px / 250px -->
+                <img src="img/womens-necklace-set@1x.jpg" srcset="img/womens-necklace-set@2x.jpg 2x" alt="womens necklace set">
+              </picture>
+            </a>
           </div>
 
           <div class="product__img-blocks">
@@ -195,7 +189,6 @@
 
             <span class="product__img-pagination">1 of 4</span>
           </div>
-
         </div>
       </div>
     </section>
@@ -608,7 +601,24 @@
   </div>
 
   <script src="js/main.js"></script>
-  <script src="js/slider.js"></script>
+  <!-- <script src="js/slider.js"></script> -->
+
+  <!-- Swiper JS -->
+  <script src="js/swiper.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 </body>
 
 </html>
