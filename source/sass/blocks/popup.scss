@@ -7,6 +7,7 @@
   background-color: rgba($color: $basic_black, $alpha: 0.25);
   padding-top: 136px;
   display: none;
+  z-index: 1;
 
   @media (max-width: $mobile-width) {
     padding-top: 117px;

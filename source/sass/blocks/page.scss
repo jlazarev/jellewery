@@ -13,9 +13,9 @@
   color: $basic_black;
 
   min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+  // display: grid;
+  // grid-template-rows: min-content 1fr min-content;
+  // align-content: start;
 
   &--no-scroll {
     overflow: hidden;
