@@ -310,19 +310,19 @@
         </div>
 
         <!-- Add Arrows -->
-        <div class="swiper-button-next">
+        <button class="swiper-button-next">
           <span class="visually-hidden">back</span>
           <svg width="30" height="11">
             <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
           </svg>
-        </div>
+        </button>
 
-        <div class="swiper-button-prev">
+        <button class="swiper-button-prev">
           <span class="visually-hidden">forward</span>
           <svg width="30" height="11">
             <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
           </svg>
-        </div>
+        </button>
       </div>
     </section>
 
@@ -649,59 +649,7 @@
   </div>
 
   <script src="js/main.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper('.new__slider', {
-      spaceBetween: 30,
-      loop: true,
-      breakpoints: {
-        320: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          pagination: {
-            el: '.swiper-pagination',
-            type: 'fraction',
-            renderFraction: function (currentClass, totalClass) {
-              return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
-            },
-          },
-        },
-        768: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-            renderBullet: function (index, className) {
-              return '<span class="' + className + '">' + (index + 1) + '</span>';
-            },
-          },
-        },
-        1024: {
-          slidesPerView: 4,
-          slidesPerGroup: 4,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-            renderBullet: function (index, className) {
-              return '<span class="' + className + '">' + (index + 1) + '</span>';
-            },
-          },
-        },
-      }
-    });
-  </script>
+  <script src="js/vendor.js"></script>
 </body>
 
 </html>

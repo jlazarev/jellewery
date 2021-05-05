@@ -642,15 +642,19 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
 }
 
-div.swiper-button-next,
-div.swiper-button-prev {
+button.swiper-button-next,
+button.swiper-button-prev {
   position: absolute;
-  top: 169px;
+  top: 159px;
   width: 40px;
+  height: 20px;
   color: $basic_brown;
+  border: none;
+  background-color: transparent;
+  padding: 0;
 
   @media (max-width: $tablet-width) {
-    top: 129px;
+    top: 107px;
     height: auto;
     width: 42px;
 
@@ -679,8 +683,8 @@ div.swiper-button-prev {
   }
 }
 
-div.swiper-button-next::after,
-div.swiper-button-prev::after {
+button.swiper-button-next::after,
+button.swiper-button-prev::after {
   display: none;
 }
 
