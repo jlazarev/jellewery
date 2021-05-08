@@ -235,3 +235,85 @@
     }
   }
 })();
+
+// Initialize Swiper
+
+(function () {
+  var sliderNew = document.querySelector('.new__slider');
+
+  if (sliderNew) {
+    var swiperNew = new Swiper('.new__slider', {
+      spaceBetween: 30,
+      loop: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+            renderFraction: function (currentClass, totalClass) {
+              return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+            },
+          },
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+          },
+        },
+        1024: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+          },
+        },
+      }
+    });
+  };
+})();
+
+(function () {
+
+  var BREAKPOINT = 768;
+  var imgBlock = document.querySelector('.product__img-blocks');
+
+  var windowInnerWidth = document.documentElement.clientWidth;
+
+  if ((windowInnerWidth < BREAKPOINT) && (imgBlock)) {
+    var swiperProduct = new Swiper('.product__img-blocks', {
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+        },
+      },
+    });
+  }
+
+})();
+

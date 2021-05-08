@@ -176,18 +176,19 @@
 .page-header__menu-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 11px;
   padding-left: 25px;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
-    padding-bottom: 10px;
+    padding-bottom: 1px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 9px;
+    padding-top: 0;
     padding-left: 0;
     padding-bottom: 0;
   }
@@ -196,7 +197,8 @@
 .page-header__menu-link {
   text-decoration: none;
   color: $basic_black;
-  margin: 0 18px;
+  margin: 0 18px 9px;
+  display: block;
 
   &:hover,
   &:focus {
